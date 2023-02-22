@@ -46,6 +46,12 @@ async def create_upload_file(file: UploadFile):
     print(f"Image '{image_path}' predicted as: {class_label}")
     return {"class": class_label}
 
+@app.get("/train/")
+def train(request):
+    #To do: train the model here and save it to the models folder. 
+    # As I used colab for training, we will just return a message for now.
+    return {"message": "Training the model"}
+
 
 
 

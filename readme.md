@@ -13,7 +13,6 @@ To ensure that the code runs smoothly on any system, we have provided a Dockerfi
 
     To stop the docker run: docker compose down
 
-This will launch a Jupyter notebook server that you can access by navigating to localhost:8888 in your browser.
 
 # Code Structure
 The project code is structured as follows:
@@ -36,25 +35,25 @@ lua
 |-- Dockerfile
 |-- requirements.txt
 
-#data/ directory
+# data/ directory
 The data/ directory contains two subdirectories: images/ and training_dataset/. These directories contain the images which we test and the data we trained for the model respectively.
 
-#models/ directory
+# models/ directory
 The models/ directory contains pre-trained models that can be used for prediction.
 
-#notebooks/ directory
+# notebooks/ directory
 The notebooks/ directory contains Jupyter notebooks for the model training.
 
-#src/ directory
-The src/ directory contains the Python source code for the project. data.py contains functions for loading and preprocessing data. model.py contains the architecture of the deep learning model. predict.py contains functions for making predictions. train.py contains functions for training the model.
+# src/ directory
+The src/ directory contains the Python source code for the project. main.py contains the main API file of the project. model_runner.py contains the different functions to load the model and predict the model. 
 
-#Dockerfile and #docker-compose.yml file
+# Dockerfile and #docker-compose.yml file
 The Dockerfile is used to build the Docker image for the project.
 
-#Readme.md file
+# Readme.md file
 The README.md file contains information about the project and how to use it.
 
-#requirements.txt file
+# requirements.txt file
 The requirements.txt file lists the Python packages required to run the project.
 
 Running the Code
@@ -65,7 +64,8 @@ Running the Code
     Run the train.py script to train the model.
     Use the predict.py script to make predictions on new images.
 
-# CICD
+# CI/CD
+In Github Actions, Continuous Integration pipeline has been created. However, for the deployment we don't have cloud server.
 
 # Conclusion
 This project provides a simple and efficient way to classify images of furniture using deep learning techniques. With the Docker container, users can run the code on any system without worrying about dependencies. The code structure is designed to be modular and easy to understand, making it easy to modify for other image classification tasks.
