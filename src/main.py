@@ -6,7 +6,7 @@ import torchvision.transforms as transforms
 app = FastAPI()
 
 # Load the model and label map
-model = load_model('model.pth')
+model = load_model('../models/model.pth') 
 
 
 transform = transforms.Compose([
