@@ -7,7 +7,6 @@ import torch.nn.functional as F
 
 LABEL_MAP = {0: "Sofa", 1: "Bed", 2: "Chair"}
 
-
 def load_model(model_path):
     model = models.resnet18(pretrained=True)
     num_ftrs = model.fc.in_features
