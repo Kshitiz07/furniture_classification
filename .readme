@@ -10,7 +10,7 @@ To ensure that the code runs smoothly on any system, we have provided a Dockerfi
     Build the Docker image using the following command: docker build -t furniture_classification .
     Run the Docker container using the following command: docker run -it -p 8888:8888 furniture_classification
 
-docker compose up -docker
+docker compose up -d
 docker compose down
 This will launch a Jupyter notebook server that you can access by navigating to localhost:8888 in your browser.
 
