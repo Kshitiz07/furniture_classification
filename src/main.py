@@ -45,27 +45,24 @@ from PIL import Image
 async def create_upload_file(file: UploadFile):
     print(type(file))
 
-    ## Save the uploaded file to disk
+    # ## Save the uploaded file to disk
     with open(file.filename, "wb") as buffer:
         buffer.write(await file.read())
 
     # Check that the file exists and is readable
     if not os.path.isfile(file.filename) or not os.access(file.filename, os.R_OK):
         return {"error": "File not found or not readable"}
-    
+    image_path = '../data/images/'+file.filename
+
     # Open the image file using Pillow
     with io.BufferedReader(io.FileIO(file.filename, 'rb')) as f:
         image = Image.open(f)
 
-    ## save the image in data if it is not already there
-    if not os.path.isfile('data/'+file.filename):
-        image.save('data/'+file.filename)
-
-    # get the image path
-    image_path = 'data/'+file.filename
-
-    print(image_path)
-
+        # save the image to the image path folder above
+        image.save('../data/images/'+file.filename)
+        if not os.path.isfile('../data/images/'+file.filename):
+            image.save(image_path)
+    
     # Make a prediction
     predicted_class = predict_class(image_path, model, transform)
     class_label = get_class_label(predicted_class)
