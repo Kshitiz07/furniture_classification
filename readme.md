@@ -14,7 +14,7 @@ To ensure that the code runs smoothly on any system, we have provided a Dockerfi
 
 # Code Structure
 The project code is structured as follows:
-lua
+
 ```
 |-- .github/workflows
 |   |-- main.yml/
