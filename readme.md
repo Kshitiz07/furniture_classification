@@ -76,4 +76,4 @@ This project provides a simple and efficient way to classify images of furniture
 If we use more data to train and perform hyper tunning, we can improve the model accuracy. 
 
 # Short Demo to setup
-https://www.youtube.com/watch?v=sLz5ogegork
+https://www.youtube.com/watch?v=PjrKt1Mf_7U
