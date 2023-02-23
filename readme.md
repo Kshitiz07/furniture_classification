@@ -7,16 +7,15 @@ To ensure that the code runs smoothly on any system, we have provided a Dockerfi
     STEPS:
     1. Install Docker on your system.
     2. Navigate to the project directory.
-    3. Build the Docker image using the following command: docker build -t cv-classification 
-    4. Run the Docker container using the following command: docker run -it -p 8888:8888 cv-classification
-    5. docker compose up -d
-
-    To stop the docker run: docker compose down
-
+    3. Build the Docker image using the following command: docker compose up -d
+    [NOTE: As I have mentioned and programmed inside the docker compose file for all url and ports, you can just run the compose command.]
+    4. You can see that  project running in the default port i.e localhost:8080/ [Check docker-compose.yml file]
+    5. To stop the docker run: docker compose down
 
 # Code Structure
 The project code is structured as follows:
 lua
+```
 |-- .github/workflows
 |   |-- main.yml/
 |-- data/
@@ -34,7 +33,8 @@ lua
 |-- docker-compose.yml
 |-- Dockerfile
 |-- requirements.txt
-
+```
+# Explanaition of Directories:
 # data/ directory
 The data/ directory contains two subdirectories: images/ and training_dataset/. These directories contain the images which we test and the data we trained for the model respectively.
 
@@ -56,16 +56,20 @@ The README.md file contains information about the project and how to use it.
 # requirements.txt file
 The requirements.txt file lists the Python packages required to run the project.
 
-Running the Code
+# Running the Code
 # To run the code, follow these steps:
     Clone the repository to your local system.
     Install the required Python packages by running pip install -r requirements.txt.
-    Download the training and validation datasets and place them in the data/ 
-    Run the train.py script to train the model.
-    Use the predict.py script to make predictions on new images.
+    [optional] Run the training.ipynb file from google collab as it takes less time to train [Personally, I did the same to reduce time. Else you can use the pre-built by default]
+    Install Docker on your system.
+    Navigate to the project directory.
+    Build the Docker image using the following command: docker compose up -d
+        [NOTE: As I have mentioned and programmed inside the docker compose file for all url and ports, you can just run the compose command.]
+    4. You can see that  project running in the default port i.e localhost:8080/ [Check docker-compose.yml file]
+    5. To stop the docker run: docker compose down
 
 # CI/CD
-In Github Actions, Continuous Integration pipeline has been created. However, for the deployment we don't have cloud server.
+In Github Actions, Continuous Integration pipeline has been created. As soon as we commit on the main branch it trigggeres the github actions. However, for the deployment we don't have cloud server.
 
 # Conclusion
 This project provides a simple and efficient way to classify images of furniture using deep learning techniques. With the Docker container, users can run the code on any system without worrying about dependencies. The code structure is designed to be modular and easy to understand, making it easy to modify for other image classification tasks.
