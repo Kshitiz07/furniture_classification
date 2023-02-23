@@ -74,3 +74,6 @@ In Github Actions, Continuous Integration pipeline has been created. As soon as 
 # Conclusion
 This project provides a simple and efficient way to classify images of furniture using deep learning techniques. With the Docker container, users can run the code on any system without worrying about dependencies. The code structure is designed to be modular and easy to understand, making it easy to modify for other image classification tasks.
 If we use more data to train and perform hyper tunning, we can improve the model accuracy. 
+
+# Short Demo to setup
+https://www.youtube.com/watch?v=sLz5ogegork
